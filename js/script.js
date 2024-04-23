@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const numberOfImages = 20; // Number of images you want to animate
-    const images = ['../images/tacos.png', '../images/umich.png', '../images/miamiheat.png', '../images/flawda.gif']; // Paths to images
+    const images = ['/images/tacos.png', '/images/umich.png', '/images/miamiheat.png', '/images/flawda.gif']; // Paths to images
 
     for (let i = 0; i < numberOfImages; i++) {
         let img = document.createElement('img');
