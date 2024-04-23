@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     if (!location.href.includes('about.html')) {
         const numberOfImages = 20;
-        const images = ['/images/tacos.png', '/images/umich.png', '/images/miamiheat.png', '/images/flawda.gif'];
+        const images = ['/finalproject/images/tacos.png', '/finalproject/images/umich.png', '/finalproject/images/miamiheat.png', '/finalproject/images/flawda.gif'];
 
         for (let i = 0; i < numberOfImages; i++) {
             let img = document.createElement('img');
@@ -32,9 +32,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 const backgroundImages = [
-    'url("/images/green.jpeg")',
-    'url("/images/buckets.png")',
-    'url("/images/mexican.jpg")'
+    'url("/finalproject/images/green.jpeg")',
+    'url("/finalproject/images/buckets.png")',
+    'url("/finalproject/images/mexican.jpg")'
 ];
 
 
