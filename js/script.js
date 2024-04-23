@@ -31,20 +31,13 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-const backgroundImages = [
-    'url("/finalproject/images/green.jpeg")',
-    'url("/finalproject/images/buckets.png")',
-    'url("/finalproject/images/mexican.jpg")'
-];
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const card = document.querySelector('.scroll-card');
     const sections = document.querySelectorAll('.content');
     const backgroundImages = [
-        'url("/images/green.jpeg")',
-        'url("/images/buckets.jpg")',
-        'url("/images/mexican.jpg")'
+        'url("/finalproject/images/green.jpeg")',
+        'url("/finalproject/images/buckets.jpg")',
+        'url("/finalproject/images/mexican.jpg")'
     ];
 
     // Ensure elements exist
