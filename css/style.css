@@ -26,6 +26,7 @@ body {
     margin-left: 30px;
     margin-right: 30px;
     font-family: monospace;
+    flex: 1;
 }
 
 .skip {
@@ -137,6 +138,9 @@ img {
     border: 2px solid black;
 }
 
+main {
+    flex: 1;
+}
 #main {
     display: flex;
     flex-wrap: wrap; /* Allows the cards to wrap onto the next line as needed */
@@ -339,33 +343,64 @@ img {
 }
 
 .scroll-card {
-    width: 1000px;
-    height: 600px;
+    width: 100%; /* or any specific width */
+    height: 600px; /* adjust based on your layout */
     overflow-y: auto;
-    border: 1px solid #ccc;
     position: relative;
     margin: 50px auto;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     background-color: white;
 }
-
 .scroll-content {
     position: relative;
-    height: 900px; /* Adjust based on the total content */
+    height: auto; /* sum of the content heights, adjust as necessary */
 }
-
 .content {
-    height: 300px;
+    height: 600px; /* each section's height */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: #333;
-    opacity: 1;
-    transition: opacity 0.5s ease; /* Transition effect for opacity */
+    color: white;
+    background-color: transparent;
 }
 
 .hidden {
     opacity: 0; /* Makes the content fully transparent */
 }
 
+footer {
+    background-color: white;  /* Light background for the footer */
+    color: black;             /* Contrasting text color for readability */
+    width: 100%;              /* Full width to align with the viewport */
+    padding-top: 10px;        /* Space above footer content */
+    border-radius: 8px;       /* Rounded corners for aesthetics */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for a layered effect */
+    margin-top: auto;
+}
+
+footer p {
+    margin: 0;  /* Resets margin */
+    padding: 0; /* Resets padding */
+    padding-left: 15px;
+}
+
+.footer-icons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;  /* Allows icons to wrap to new line if space requires */
+    justify-content: left; /* Center horizontally */
+    align-items: center;     /* Align vertically */
+    width: auto;             /* Width based on content */
+    padding: 10px;           /* Padding around the icons */
+    gap: 10px;               /* Space between each icon */
+    border: remove;
+}
+
+.footer-icon {
+    padding: 5px;  /* Padding around icons */
+    margin: 0 5px; /* Margin on the sides of icons */
+    display: inline-block; /* Ensures proper alignment in row */
+    height: 40px;
+    width: 40px;
+}

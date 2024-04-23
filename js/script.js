@@ -14,35 +14,61 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 document.addEventListener('DOMContentLoaded', function() {
-    const numberOfImages = 20; // Number of images you want to animate
-    const images = ['/finalproject/images/tacos.png', '/finalproject/images/umich.png', '/finalproject/images/miamiheat.png', '/finalproject/images/flawda.gif']; // Paths to images
+    if (!location.href.includes('about.html')) {
+        const numberOfImages = 20;
+        const images = ['/images/tacos.png', '/images/umich.png', '/images/miamiheat.png', '/images/flawda.gif'];
 
-    for (let i = 0; i < numberOfImages; i++) {
-        let img = document.createElement('img');
-        img.src = images[i % images.length]; // Cycle through images
-        img.classList.add('floating-img');
-        img.style.top = Math.random() * window.innerHeight + 'px';
-        img.style.left = Math.random() * window.innerWidth + 'px';
-        img.style.animationName = 'floatAnimation' + (i % 6 + 1); // Up to 6 different animations
-        document.body.appendChild(img);
+        for (let i = 0; i < numberOfImages; i++) {
+            let img = document.createElement('img');
+            img.src = images[i % images.length];
+            img.classList.add('floating-img');
+            img.style.top = Math.random() * window.innerHeight + 'px';
+            img.style.left = Math.random() * window.innerWidth + 'px';
+            img.style.animationName = 'floatAnimation' + (i % 6 + 1);
+            document.body.appendChild(img);
+        }
     }
 });
+
+
+const backgroundImages = [
+    'url("/images/green.jpeg")',
+    'url("/images/buckets.png")',
+    'url("/images/mexican.jpg")'
+];
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const card = document.querySelector('.scroll-card');
     const sections = document.querySelectorAll('.content');
+    const backgroundImages = [
+        'url("/images/green.jpeg")',
+        'url("/images/buckets.jpg")',
+        'url("/images/mexican.jpg")'
+    ];
+
+    // Ensure elements exist
+    if (!card || sections.length === 0 || backgroundImages.length === 0) {
+        console.error('Initialization error: Elements or images not found.');
+        return;
+    }
+
+    // Set initial background
+    card.style.backgroundImage = backgroundImages[0];
 
     card.addEventListener('scroll', () => {
-        const currentIndex = Math.floor(card.scrollTop / 300); // 300 is the height of each section
-        sections.forEach((sec, index) => {
-            if (index === currentIndex) {
-                sec.classList.add('active');
-                sec.style.display = 'flex'; // Show only the active section
-            } else {
-                sec.classList.remove('active');
-                sec.style.display = 'none'; // Hide other sections
-            }
-        });
+        const currentIndex = Math.floor(card.scrollTop / 300); // Assuming each section is 300px high
+        if (backgroundImages[currentIndex]) {
+            card.style.backgroundImage = backgroundImages[currentIndex];
+            console.log('Background updated to:', backgroundImages[currentIndex]);
+        }
     });
+});
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    if (window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
+        document.body.style.overflow = 'hidden';
+    }
 });
 
