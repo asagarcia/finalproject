@@ -343,27 +343,53 @@ main {
 }
 
 .scroll-card {
-    width: 100%; /* or any specific width */
-    height: 600px; /* adjust based on your layout */
+    width: 100%; /* Adjust width as needed */
+    height: 600px; /* Fixed height to enable scrolling */
     overflow-y: auto;
     position: relative;
-    margin: 50px auto;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-    background-color: white;
+    margin: 20px auto;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
+
 .scroll-content {
     position: relative;
-    height: auto; /* sum of the content heights, adjust as necessary */
+    height: 1800px; /* Adjust based on the content height */
 }
+
 .content {
-    height: 600px; /* each section's height */
+    height: 600px; /* Adjust height as needed */
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 24px;
-    color: white;
-    background-color: transparent;
+    color: #333;
+    transition: opacity 0.5s ease;
+    padding: 20px;
 }
+
+.content:nth-child(1) {
+    background-image: url('/images/green.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+.content:nth-child(2) {
+    background-image: url('/images/buckets.png');
+    background-size: cover;
+    background-position: center;
+}
+
+.content:nth-child(3) {
+    background-image: url('/images/mexican.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.text-background {
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white */
+    padding: 5px 10px;
+}
+
 
 .hidden {
     opacity: 0; /* Makes the content fully transparent */

@@ -16,7 +16,12 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('DOMContentLoaded', function() {
     if (!location.href.includes('about.html')) {
         const numberOfImages = 20;
-        const images = ['/finalproject/images/tacos.png', '/finalproject/images/umich.png', '/finalproject/images/miamiheat.png', '/finalproject/images/flawda.gif'];
+        const images = [
+            { src: '/finalproject/images/tacos.png', alt: 'A plate of delicious tacos' },
+            { src: '/finalproject/images/umich.png', alt: 'University of Michigan logo' },
+            { src: '/finalproject/images/miamiheat.png', alt: 'Miami Heat logo' },
+            { src: '/finalproject/images/flawda.gif', alt: 'map of Florida' }
+        ];
 
         for (let i = 0; i < numberOfImages; i++) {
             let img = document.createElement('img');
