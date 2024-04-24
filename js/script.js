@@ -17,15 +17,16 @@ document.addEventListener('DOMContentLoaded', function() {
     if (!location.href.includes('about.html')) {
         const numberOfImages = 20;
         const images = [
-            { src: '/finalproject/images/tacos.png', alt: 'A plate of delicious tacos' },
+            { src: '/finalproject/images/tacos.png', alt: 'Delicious tacos on a plate' },
             { src: '/finalproject/images/umich.png', alt: 'University of Michigan logo' },
-            { src: '/finalproject/images/miamiheat.png', alt: 'Miami Heat logo' },
-            { src: '/finalproject/images/flawda.gif', alt: 'map of Florida' }
+            { src: '/finalproject/images/miamiheat.png', alt: 'Miami Heat basketball team logo' },
+            { src: '/finalproject/images/flawda.gif', alt: 'Animated image of the state of Florida' }
         ];
 
         for (let i = 0; i < numberOfImages; i++) {
             let img = document.createElement('img');
-            img.src = images[i % images.length];
+            img.src = images[i % images.length].src; // Use the src from the image object
+            img.alt = images[i % images.length].alt; // Use the alt text from the image object
             img.classList.add('floating-img');
             img.style.top = Math.random() * window.innerHeight + 'px';
             img.style.left = Math.random() * window.innerWidth + 'px';
@@ -34,6 +35,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
 
 
 document.addEventListener('DOMContentLoaded', () => {
