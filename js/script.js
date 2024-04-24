@@ -36,8 +36,6 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 });
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const card = document.querySelector('.scroll-card');
     const sections = document.querySelectorAll('.content');
@@ -63,12 +61,5 @@ document.addEventListener('DOMContentLoaded', () => {
             console.log('Background updated to:', backgroundImages[currentIndex]);
         }
     });
-});
-
-
-document.addEventListener("DOMContentLoaded", function() {
-    if (window.location.pathname === "/" || window.location.pathname.endsWith("index.html")) {
-        document.body.style.overflow = 'hidden';
-    }
 });
 
