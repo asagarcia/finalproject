@@ -328,7 +328,7 @@ main {
 
 #contact-form input[type="submit"] {
     background-color: navy; /* Green background */
-    color: white; /* White text color */
+    color: gold; /* White text color */
     border: none; /* No border */
     padding: 10px 20px; /* Padding inside the button */
     text-transform: uppercase; /* Uppercase text */
@@ -339,7 +339,8 @@ main {
 }
 
 #contact-form input[type="submit"]:hover {
-    background-color: navy; /* Darker green on hover */
+    background-color: gold; /* Darker on hover */
+    color: navy;
 }
 
 .scroll-card {
